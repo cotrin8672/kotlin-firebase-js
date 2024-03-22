@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -24,9 +25,9 @@
             <option value="$PROJECT_DIR$/build-logic/convention" />
             <option value="$PROJECT_DIR$/firebase-app" />
             <option value="$PROJECT_DIR$/firebase-auth" />
-            <option value="$PROJECT_DIR$/firebase-bom" />
             <option value="$PROJECT_DIR$/firebase-firestore" />
             <option value="$PROJECT_DIR$/firebase-storage" />
+            <option value="$PROJECT_DIR$/firebase-wrapper-bom" />
           </set>
         </option>
       </GradleProjectSettings>
