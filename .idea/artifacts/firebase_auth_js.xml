@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="firebase-auth-js">
+    <output-path>$PROJECT_DIR$/firebase-auth/build/libs</output-path>
+    <root id="archive" name="firebase-auth-js.jar">
+      <element id="module-output" name="kotlin-firebase-js.firebase-auth.jsMain" />
+    </root>
+  </artifact>
+</component>

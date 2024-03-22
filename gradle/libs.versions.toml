@@ -1,0 +1,19 @@
+[versions]
+kotlin = "1.9.23"
+maven-publish = "0.28.0"
+seskar = "2.43.0"
+
+[libraries]
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-maven-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "maven-publish" }
+seskar = { module = "io.github.turansky.seskar:seskar-core", version.ref = "seskar" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+gradle-maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
+seskar = { id = "io.github.turansky.seskar", version.ref = "seskar" }
+
+# CustomPlugin
+kotlin-multiplatform-convention = { id = "kotlin-multiplatform-convention", version = "unspecified" }
+publish-convention = { id = "publish-convention", version = "unspecified" }
+kotlin-libs-convention = { id = "kotlin-libs-convention", version = "unspecified" }

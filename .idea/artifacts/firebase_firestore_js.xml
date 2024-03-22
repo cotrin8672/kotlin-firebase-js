@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="firebase-firestore-js">
+    <output-path>$PROJECT_DIR$/firebase-firestore/build/libs</output-path>
+    <root id="archive" name="firebase-firestore-js.jar">
+      <element id="module-output" name="kotlin-firebase-js.firebase-firestore.jsMain" />
+    </root>
+  </artifact>
+</component>
