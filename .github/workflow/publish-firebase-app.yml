@@ -7,7 +7,7 @@ on:
     paths:
       - 'firebase-app/**'
 
-job:
+jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
