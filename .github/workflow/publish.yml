@@ -1,0 +1,45 @@
+# .github/workflows/gradle.yml
+name: Gradle Build and Publish
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '21'
+          distribution: 'adopt'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Detect Changes
+        id: detect-changes
+        run: |
+          echo "::set-output name=firebase-app::$(git diff --quiet HEAD^ HEAD firebase-app/ || echo true)"
+          echo "::set-output name=firebase-auth::$(git diff --quiet HEAD^ HEAD firebase-auth/ || echo true)"
+          echo "::set-output name=firebase-firestore::$(git diff --quiet HEAD^ HEAD firebase-firestore/ || echo true)"
+          echo "::set-output name=firebase-storage::$(git diff --quiet HEAD^ HEAD firebase-storage/ || echo true)"
+
+      - name: Publish Module 1
+        if: steps.detect-changes.outputs.firebase-app == 'true'
+        run: ./gradlew :module1:publish
+
+      - name: Publish Module 2
+        if: steps.detect-changes.outputs.module2 == 'true'
+        run: ./gradlew :module2:publish
+
+      - name: Publish Module 3
+        if: steps.detect-changes.outputs.module3 == 'true'
+        run: ./gradlew :module3:publish
+
+      - name: Publish Module 4
+        if: steps.detect-changes.outputs.module4 == 'true'
+        run: ./gradlew :module4:publish
