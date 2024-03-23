@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.kotlin.libs.convention)
 }
 
-version = "0.0.2"
+version = "0.0.1"
 
 kotlin {
     sourceSets.jsMain {
