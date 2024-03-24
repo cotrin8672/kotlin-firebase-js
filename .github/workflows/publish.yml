@@ -48,7 +48,7 @@ jobs:
 
       - name: Search changed files
         id: changed-files
-        uses: tj-actions/changed-files@v10.1
+        uses: tj-actions/changed-files@v43.0.1
 
       - name: Publish app module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-app/build.gradle.kts')
