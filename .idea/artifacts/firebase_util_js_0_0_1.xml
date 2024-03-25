@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="firebase-util-js-0.0.1">
-    <output-path>$PROJECT_DIR$/firebase-util/build/libs</output-path>
-    <root id="archive" name="firebase-util-js-0.0.1.jar">
-      <element id="module-output" name="kotlin-firebase-js.firebase-util.jsMain" />
-    </root>
-  </artifact>
-</component>
