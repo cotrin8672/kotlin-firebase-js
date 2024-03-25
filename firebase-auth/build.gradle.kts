@@ -7,6 +7,7 @@ version = "0.0.1"
 kotlin {
     sourceSets.jsMain {
         dependencies {
+            implementation(projects.firebaseUtil)
             implementation(projects.firebaseApp)
             implementation(npm("@firebase/auth", "1.6.2"))
         }

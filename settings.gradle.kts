@@ -17,6 +17,7 @@ dependencyResolutionManagement {
     }
 }
 
+include(":firebase-util")
 include(":firebase-app")
 include(":firebase-auth")
 include(":firebase-storage")

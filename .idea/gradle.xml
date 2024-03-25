@@ -27,6 +27,7 @@
             <option value="$PROJECT_DIR$/firebase-auth" />
             <option value="$PROJECT_DIR$/firebase-firestore" />
             <option value="$PROJECT_DIR$/firebase-storage" />
+            <option value="$PROJECT_DIR$/firebase-util" />
             <option value="$PROJECT_DIR$/firebase-wrapper-bom" />
           </set>
         </option>
