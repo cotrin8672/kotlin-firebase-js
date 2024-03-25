@@ -9,6 +9,7 @@ on:
       - 'firebase-auth/**'
       - 'firebase-firestore/**'
       - 'firebase-storage/**'
+      - 'firebase-util/**'
       - 'firebase-wrapper-bom/**'
 
 jobs:
@@ -65,6 +66,10 @@ jobs:
       - name: Publish storage module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-storage/build.gradle.kts')
         run: ./gradlew :firebase-storage:publishToMavenCentral
+
+      - name: Publish util module
+        if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-util/build.gradle.kts')
+        run: ./gradlew :firebase-util:publishToMavenCentral
 
       - name: Publish bom module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-wrapper-bom/build.gradle.kts')
