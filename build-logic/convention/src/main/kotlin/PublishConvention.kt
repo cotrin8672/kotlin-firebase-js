@@ -10,6 +10,8 @@ class PublishConvention : Plugin<Project> {
             with(pluginManager) {
                 apply(libs.gradleMavenPublishPluginId)
             }
+        }
+        target.afterEvaluate {
             extensions.configure<MavenPublishBaseExtension> {
                 publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = false)
                 signAllPublications()
@@ -17,7 +19,7 @@ class PublishConvention : Plugin<Project> {
                 coordinates(
                     rootProject.group.toString(),
                     "kotlin-${project.name}",
-                    version.toString()
+                    project.version.toString()
                 )
 
                 pom {
