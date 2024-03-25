@@ -53,24 +53,24 @@ jobs:
 
       - name: Publish app module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-app/build.gradle.kts')
-        run: ./gradlew :firebase-app:publishJsPublicationToMavenCentralRepository
+        run: ./gradlew :firebase-app:publishToMavenCentral
 
       - name: Publish auth module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-auth/build.gradle.kts')
-        run: ./gradlew :firebase-auth:publishJsPublicationToMavenCentralRepository
+        run: ./gradlew :firebase-auth:publishToMavenCentral
 
       - name: Publish firestore module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-firestore/build.gradle.kts')
-        run: ./gradlew :firebase-firestore:publishJsPublicationToMavenCentralRepository
+        run: ./gradlew :firebase-firestore:publishToMavenCentral
 
       - name: Publish storage module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-storage/build.gradle.kts')
-        run: ./gradlew :firebase-storage:publishJsPublicationToMavenCentralRepository
+        run: ./gradlew :firebase-storage:publishToMavenCentral
 
       - name: Publish util module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-util/build.gradle.kts')
-        run: ./gradlew :firebase-util:publishJsPublicationToMavenCentralRepository
+        run: ./gradlew :firebase-util:publishToMavenCentral
 
       - name: Publish bom module
         if: contains(steps.changed-files.outputs.all_modified_files, 'firebase-wrapper-bom/build.gradle.kts')
-        run: ./gradlew :firebase-wrapper-bom:publishJsPublicationToMavenCentralRepository
+        run: ./gradlew :firebase-wrapper-bom:publishToMavenCentral
