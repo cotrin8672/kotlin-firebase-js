@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.publish.convention)
 }
 
-version = rootProject
+version = "0.0.1"
 
 javaPlatform {
     allowDependencies()

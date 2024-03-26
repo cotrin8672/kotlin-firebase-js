@@ -8,4 +8,3 @@ plugins {
 }
 
 group = "io.github.cotrin8672"
-version = "0.0.1"
