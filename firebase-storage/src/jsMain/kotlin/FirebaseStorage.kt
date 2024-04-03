@@ -71,19 +71,19 @@ external fun updateMetadata(ref: StorageReference, metadata: SettableMetadata): 
 
 external fun uploadBytes(
     ref: StorageReference,
-    data: Blob,
+    data: Blob?,
     metadata: UploadMetadata? = definedExternally,
 )
 
 external fun uploadBytes(
     ref: StorageReference,
-    data: Uint8Array,
+    data: Uint8Array?,
     metadata: UploadMetadata? = definedExternally,
 )
 
 external fun uploadBytes(
     ref: StorageReference,
-    data: ArrayBuffer,
+    data: ArrayBuffer?,
     metadata: UploadMetadata? = definedExternally,
 )
 
